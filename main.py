@@ -8,6 +8,7 @@ import json
 import re
 from urllib.parse import quote
 import logging
+import os
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -419,4 +420,5 @@ async def get_supported_languages():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.getenv("PORT", 8000))  # Use Render's PORT env var or default to 8000
+    uvicorn.run(app, host="0.0.0.0", port=port)
