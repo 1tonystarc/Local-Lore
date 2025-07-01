@@ -7,7 +7,7 @@ python-dotenv==1.0.0
 pydantic==2.5.0
 transformers==4.36.0
 torch==2.5.0
-sentence-transformers==2.2.2
+sentence-transformers==2.2.0
 numpy==1.26.4
 redis==5.0.1
 aioredis==2.0.1
